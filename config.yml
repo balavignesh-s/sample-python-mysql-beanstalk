@@ -4,5 +4,6 @@ branch-defaults:
 global:
   application_name: sample-python
   default_region: us-west-2
+  default_ec2_keyname: myKeyPair
   profile: eb-cli
   sc: git
