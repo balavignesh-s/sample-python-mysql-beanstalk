@@ -24,7 +24,7 @@ install:
 before_script: 
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - sudo bash /etc/init.d/mysql.server start
+  - sudo su -c "/usr/bin/mysqld_safe > /dev/null 2>&1 &"
   - mysql -e 'create database if not exists test;'
   - mkdir -p ~/.aws
   - echo '[profile eb-cli]' > ~/.aws/config
